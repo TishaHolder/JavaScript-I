@@ -10,8 +10,6 @@ let myFunction = () => {
 };
 myFunction();
 
-
-
 // let anotherFunction = function (param) {
 //   return param;
 // };
@@ -20,7 +18,6 @@ myFunction();
 let anotherFunction = (param) => {
     return param;
 };
-
 anotherFunction ("Example");
 
 // let add = function (param1, param2) {
@@ -31,7 +28,6 @@ anotherFunction ("Example");
 let add = (param1, param2) => {
     return param1 + param2;
 }
-
 add (1, 2);
 
 // let subtract = function (param1, param2) {
@@ -41,7 +37,6 @@ add (1, 2);
 
 let subtract = (param1, param2) => {
     return param1 - param2;
-
 };
 subtract (1, 2);
 
@@ -60,4 +55,6 @@ const triple = exampleArray.map((num) => {
     return num * 3;
 });
 
-console.log(triple);
+console.log(`Results of the triple function: ${triple}`);
+
+console.log("***************************************************************************************************");

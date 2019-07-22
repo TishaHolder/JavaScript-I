@@ -65,26 +65,26 @@ const internAntonietta = {
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
-console.log(internMitzi.name);
+console.log(`Mitzi's Name: ${internMitzi.name}`);
 
 // Kennan's ID
-console.log(internKennan.id);
+console.log(`Kennan's ID: ${internKennan.id}`);
 
 // Keven's email
-console.log(internKeven.email);
+console.log(`Keven's email: ${internKeven.email}`);
 
 // Gannie's name
-console.log(internGannie.name);
+console.log(`Gannie's name: ${internGannie.name}`);
 
 // Antonietta's Gender
-console.log(internAntonietta.gender);
+console.log(`Antonietta's Gender: ${internAntonietta.gender}`);
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 console.log(internKennan.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-console.log(internAntonietta.multiplyNums(3,4));
+console.log(`The result of Antonietta's math method: ${internAntonietta.multiplyNums(3,4)}`);
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
@@ -120,20 +120,21 @@ const parent = {
 };
 
 // Log the parent object's name
-console.log(parent.name);
+console.log(`Parent object's name: ${parent.name}`);
 
 // Log the child's age
-console.log(parent.child['age']);
+console.log(`Child's age: ${parent.child['age']}`);
 
 // Log the name and age of the grandchild
-console.log(parent.child.grandChild['name']);
-console.log(parent.child.grandChild['age']);
+console.log(`Grandchild' name is ${parent.child.grandChild['name']} and he is ${parent.child.grandChild['age']} years old.`);
 
 // Have the parent speak
-console.log(parent.speakName());
+console.log(`Parent speak: ${parent.speakName()}`);
 
 // Have the child speak
-console.log(parent.child.speakName());
+console.log(`Child speak: ${parent.child.speakName()}`);
 
 // Have the grandchild speak
-console.log(parent.child.grandChild.speakName());
+console.log(`Grandchild speak: ${parent.child.grandChild.speakName()}`);
+
+console.log("***************************************************************************************************");
