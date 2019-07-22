@@ -74,23 +74,71 @@ console.log(`The last car's make is: ${inventory[lastCar].car_make} and it' mode
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 //let carModels = [];
-//let carModels = inventory.sort();
-//console.log(carModels);
+
+let carModels = [];
+
+for (let i = 0; i < inventory.length; i++) { 
+    carModels[i] = inventory[i].car_model;
+}
+
+carModels.sort();
+
+console.log(`The car models in alphabetical order are: ${carModels}`);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 //let carYears = [];
-console.log();
+
+let carYears = [];
+
+for (let i = 0; i < inventory.length; i++) {
+    carYears [i] = inventory[i].car_year;
+}
+
+console.log(`All the years from every car on the lot are: ${carYears}`);
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
+//let oldCars = [];
+
 let oldCars = [];
-console.log(); 
+let oldCarsTemp = 0;//variable that temporarily stores years > 2000
+
+for (let i = 0; i < inventory.length; i++) {
+
+    //if the year found at the current index is greater than 2000
+    if (carYears[i] > 2000) {
+        
+        /*The push() method adds the value stored in carYears[i] to the end of the oldCars array and returns the new length of the array.*/
+        oldCars.push(carYears[i]);
+
+    }//end if
+
+}//end for
+
+console.log(`${oldCars.length} cars are older than the year 2000.`);
+console.log(oldCars);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+//let BMWAndAudi = [];
+
 let BMWAndAudi = [];
-console.log();
+
+for (let i = 0; i < inventory.length; i++) {
+
+    //if the car make is BMW or Audi
+    if ((inventory[i].car_make === 'BMW') || (inventory[i].car_make === 'Audi')) {
+
+         /*The push() method adds the value stored in inventory[i] to the end of the BMWAndAudi array and returns the new length of the array.*/
+        BMWAndAudi.push(inventory[i]);
+    }//end if
+
+}//end for
+
+//use JSON.stringify() to show the results of the array in the console.
+var myJSONString = JSON.stringify(BMWAndAudi);
+console.log(myJSONString);
 
 
 
