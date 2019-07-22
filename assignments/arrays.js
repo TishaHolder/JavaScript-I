@@ -73,12 +73,13 @@ console.log(`The last car's make is: ${inventory[lastCar].car_make} and it' mode
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
-let carModels = [inventory.map(car_model => car)];
-console.log();
+//let carModels = [];
+//let carModels = inventory.sort();
+//console.log(carModels);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = [];
+//let carYears = [];
 console.log();
 
 // ==== Challenge 5 ====

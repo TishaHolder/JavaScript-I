@@ -96,17 +96,44 @@ console.log(internAntonietta.multiplyNums(3,4));
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
 const parent = {
+  name: "Susan",
+  age: 70,
+  speakName: function () {
+    return this.name;
+  },
 
+  child: {
+    name: "George",
+    age: 50,
+    speakName: function () {
+      return this.name;
+    },
+
+    grandChild: {
+      name: "Sam",
+      age: 30,
+      speakName: function () {
+        return this.name;
+      }
+    }
+  }
 };
 
 // Log the parent object's name
+console.log(parent.name);
 
 // Log the child's age
+console.log(parent.child['age']);
 
 // Log the name and age of the grandchild
+console.log(parent.child.grandChild['name']);
+console.log(parent.child.grandChild['age']);
 
 // Have the parent speak
+console.log(parent.speakName());
 
 // Have the child speak
+console.log(parent.child.speakName());
 
 // Have the grandchild speak
+console.log(parent.child.grandChild.speakName());
